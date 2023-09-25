@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        <base href="" >
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Pardot Website 検証用"/>
+        <title>Pardot Website 検証2</title>
+    </head>
+    <body>
+        Hello World
+	    <!-- Pardotで確認したFH連携用のコードをコピペ -->
+       <!-- まずは必須項目だけ連携 -->
+ <!--  ----------------------------------------------------------------------  -->
+<!--  次の <FORM> 要素をページに追加してください。                                              -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://www.smeislay.com/l/1007152/2023-04-12/4gk5ht" method="post">
+
+<input type=hidden name="orgid" value="00D5g00000I4Hs6">
+<input type=hidden name="retURL" value="http://">
+
+<label for="name">取引先責任者名</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="phone">電話</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+<label for="subject">件名</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">説明</label><textarea name="description"></textarea><br>
+
+<input type="submit" name="submit">
+
+</form>
+       <input type="submit" name="送信">
+</form>
+        <script type='text/javascript'>
+piAId = '1008152';
+piCId = '10663';
+piHostname = 'www.smeislay.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+    </body>
+</html>
