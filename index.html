@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+ // Getを使ってみよう！
+    pdt(function (tracker) {
+      let status = tracker.getConsentStatus();
+      let title = tracker.get("title");
+      let url = tracker.get("url");
+      let referrer = tracker.get("referrer");
+      let piEmail = tracker.get("piEmail");
+      let utmCampaign = tracker.get("utmCampaign");
+      console.log(status, title, url, referrer, piEmail, utmCampaign);
+    });
+	    
 	<script>
     var piDomain = 'www.smeislay.com'; // format of 'go.example.com'
 
@@ -13,6 +24,8 @@
     // Create an analytics tracker with the required information:
     // pdt('create', Account Engagement account ID + 1000, Account Engagement campaign ID + 1000, 'go.example.com');
     pdt('create', 1008152, 10666, piDomain);
+    pdt('set', 'title', 'Wednesday');
+    pdt('set', 'url', 'https://help.salesforce.com/s/articleView?id=000382242&type=1');
     pdt('sendPageView');
 
 </script>
