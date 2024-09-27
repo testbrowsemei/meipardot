@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-to-リードフォーム</title>
+</head>
+<body>
+    <h2>お問い合わせフォーム</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <!-- Salesforceの組織IDを入力 -->
+        <input type="hidden" name="oid" value="YOUR_SALESFORCE_ORG_ID">
 
+        <!-- リードの情報を入力 -->
+        <label for="first_name">名:</label>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">姓:</label>
+        <input type="text" id="last_name" name="last_name" required><br>
+
+        <label for="company">会社名:</label>
+        <input type="text" id="company" name="company" required><br>
+
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">電話番号:</label>
+        <input type="tel" id="phone" name="phone"><br>
+
+        <label for="description">お問い合わせ内容:</label>
+        <textarea id="description" name="description"></textarea><br>
+
+        <!-- フォーム送信ボタン -->
+        <input type="submit" value="送信">
+    </form>
+</body>
+</html>
