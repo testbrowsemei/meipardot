@@ -4,18 +4,13 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  次の <FORM> 要素をページに追加してください。                                              -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://www.meiseki2024.com/l/1007152/2024-09-26/4j82q6" method="post">
+<form action="https://www.meiseki2024.com/l/1007152/2024-09-26/4j82q6" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"key","fallback":"true","orgId":"00D5g00000I4Hs6","ts":""}'>
 <input type=hidden name="oid" value="00D5g00000I4Hs6">
 <input type=hidden name="retURL" value="https://help.salesforce.com/s/articleView?id=sf.pardot_forms_integrate_web_to_lead.htm&type=5">
 
@@ -38,7 +33,6 @@
 
 <label for="state">都道府県</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
 
-<div class="g-recaptcha" data-sitekey="aaa"></div><br>
 <input type="submit" name="submit">
 
 </form>
