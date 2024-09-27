@@ -1,37 +1,40 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-to-リードフォーム</title>
-</head>
-<body>
-    <h2>お問い合わせフォーム</h2>
-    <form action="https://www.meiseki2024.com/l/1007152/2024-09-26/4j82q6" method="POST">
-        <!-- Salesforceの組織IDを入力 -->
-        <input type="hidden" name="oid" value="YOUR_SALESFORCE_ORG_ID">
+<!--  ----------------------------------------------------------------------  -->
+<!--  次の <META> 要素を、HTML の <HEAD>タグ間に追加してください。必要に応じて、charset                  -->
+<!--  パラメーターを変更して、HTML ページの文字コードを指定してください。                                    -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <!-- リードの情報を入力 -->
-        <label for="first_name">名:</label>
-        <input type="text" id="first_name" name="first_name" required><br>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
 
-        <label for="last_name">姓:</label>
-        <input type="text" id="last_name" name="last_name" required><br>
+<!--  ----------------------------------------------------------------------  -->
+<!--  次の <FORM> 要素をページに追加してください。                                              -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <label for="company">会社名:</label>
-        <input type="text" id="company" name="company" required><br>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5g00000I4Hs6" method="POST">
 
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required><br>
+<input type=hidden name='captcha_settings' value='{"keyname":"key","fallback":"true","orgId":"00D5g00000I4Hs6","ts":""}'>
+<input type=hidden name="oid" value="00D5g00000I4Hs6">
+<input type=hidden name="retURL" value="https://www.meiseki2024.com/l/1007152/2024-08-20/4j58pt">
 
-        <label for="phone">電話番号:</label>
-        <input type="tel" id="phone" name="phone"><br>
+<!--  ----------------------------------------------------------------------  -->
+<!--  注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。        -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="mei.seki@salesforce.com">                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <label for="description">お問い合わせ内容:</label>
-        <textarea id="description" name="description"></textarea><br>
+<label for="first_name">名</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
-        <!-- フォーム送信ボタン -->
-        <input type="submit" value="送信">
-    </form>
-</body>
-</html>
+<label for="last_name">姓</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="company">会社名</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+<div class="g-recaptcha" data-sitekey="aaa"></div><br>
+<input type="submit" name="submit">
+
+</form>
