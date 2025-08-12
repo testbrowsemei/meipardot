@@ -4,20 +4,15 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
 
 <!--  ----------------------------------------------------------------------  -->
-<!--  次の <FORM> 要素をページに追加aしてください。                                              -->
+<!--  次の <FORM> 要素をページに追加してください。                                              -->
 <!--  ----------------------------------------------------------------------  -->
 
 <form action="https://www.meiseki2024.com/l/1007152/2025-08-11/4jmlgj" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"key","fallback":"true","orgId":"00D5g00000I4Hs6","ts":""}'>
 <input type=hidden name="orgid" value="00D5g00000I4Hs6">
-<input type=hidden name="retURL" value="https://help.salesforce.com/s/articleView?id=mktg.pardot_forms_integrate_web_to_lead.htm&type=5">
+<input type=hidden name="retURL" value="http://">
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。        -->
@@ -30,17 +25,12 @@
 
 <label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
+<label for="phone">電話</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
 <label for="subject">件名</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
 
-<label for="status">状況</label><select  id="status" name="status"><option value="">--なし--</option><option value="保留">保留</option>
-<option value="調査中">調査中</option>
-<option value="クローズ">クローズ</option>
-<option value="新規">新規</option>
-</select><br>
+<label for="description">説明</label><textarea name="description"></textarea><br>
 
-<label for="company">会社名</label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
-
-<div class="g-recaptcha" data-sitekey="aaa"></div><br>
 <input type="submit" name="submit">
 
 </form>
